@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			background-color: #eee;
+			padding: 50px;
+		}
+		.left, .tip{
+			float: left;
+		}
+		.left{
+			margin-right: 10px;
+		}
+		/*在没有点击输入框的情况下 提示是不显示的*/
+		.tip{
+			display: none;
+		}
+		/*.error{
+			float: left;
+			background-repeat: no-repeat;
+			background-image: url(../../img/error.png);
+		}
+		.right{
+			float: left;
+			background-repeat: no-repeat;
+			background-image: url(../../img/right.png);
+		}*/
+	</style>
+	<script>
+		window.onload=function(){
+			//获取文本框和提示框
+			var phone = document.getElementById("phone"),
+				 tip = document.getElementById("tip");
+			//输入框获得焦点时 显示提示内容
+			phone.onfocus = function(){
+				tip.style.display="block";
+			}
+			//输入框失去焦点时 检测输入号码位数 并显示相应图片
+			phone.onblur = function(){
+				var phoneNums = this.value;
+				if (phoneNums.length == 11 && isNaN(phoneNums) == false) {
+					tip.innerHTML='<img src="img/right.png"/>';
+				}else{
+					tip.innerHTML='<img src="img/error.png"/>';
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="box">
+		<div class="left">
+			<input type="text" placeholder="请输入手机号码" id="phone">
+		</div>
+		<div class="tip" id="tip">
+			请输入有效的手机号码
+		</div>
+	</div>
+</body>
+</html>

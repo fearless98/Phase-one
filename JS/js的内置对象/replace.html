@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// var tel = '010-6248659,028-468265,0730-7386353';
+		// var word = "I am zebra";
+		// var rep = tel.replace(','," ");
+		// var newword = word.toUpperCase();
+		// var upper = word.charAt(3).toUpperCase();
+		// console.log(upper);
+		// console.log(newword);
+		// console.log(rep);
+		function camelback(str){
+			//通过“-”这个分隔符将str拆分成数组
+			var arr = str.split("-"),newStr=arr[0];
+			for (var i = 1; i < arr.length; i++) {
+				var word = arr[i];
+				newStr += word.charAt(0).toUpperCase()+word.substr(1);
+			}
+			return newStr;
+		}
+		var camelFormat = camelback("get-element-by-id");
+		console.log(camelFormat);
+	</script>
+</body>
+</html>

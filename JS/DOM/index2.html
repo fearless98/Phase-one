@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="box" id="box">box</div>
+	<ul id="list">
+		<li>前端开发</li>
+		<li>服务器端开发</li>
+		<li>UI设计</li>
+	</ul>
+	<script>
+		box.style.color='#f00';
+		box.style.fontWeight='bold';
+		var lis = document.getElementById("list").getElementsByTagName("li");
+		//遍历每一个li
+		for (var i = 0; i < lis.length; i++) {
+			lis[i].style.color="#00f";
+			switch(i){
+				case 0:
+					lis[i].style.backgroundColor="#666";
+					break;
+				case 1:
+					lis[i].style.backgroundColor="#999";
+					break;
+				case 2:
+					lis[i].style.backgroundColor="#333";
+					break;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+	<a href="history.html">Go to history.html</a>
+    <div id="box">
+       <!--  <span>三星 Galaxy S9</span>
+        <button id="btn">删除</button> -->
+        <script>
+            // var btn = document.getElementById("btn");
+            // btn.onclick = function() {
+            //     var result = window.confirm("您确定要删除此商品吗？");
+            //     console.log(result);
+            //     if (result == true) {
+            //         document.getElementById('box').style.display = "none";
+            //     } else {
+            //         return;
+            //     }
+            // }
+
+            // var message = window.prompt("请输入您的星座", "双子座");
+            // console.log(message);
+
+            //打开指定窗口->newWindow.html
+            // window.onload = function() {
+            //         window.open("newWindow.html", "New-Window", "width=400,height=200,left=50,top=50,toolbar=no,menubar=no,scrollbars=no,location=no,status=no");
+            //     }
+            //width:窗口宽度   height:窗口高度   left:窗口X轴坐标   right:窗口Y轴坐标
+            //toolbar:是否显示浏览器的工具栏    menubar:是否显示滚动条   location:是否显示地址字段  status:是否添加状态栏
+            
+            //超市调用
+            // setTimeout("alert('hello world')", 1000);
+            // var fnCall = function(){ //自定义函数
+            // 	alert("world");
+            // 	console.log('fnCall');
+            // }
+            // var timeOut1 = setTimeout(function(){ //匿名函数
+            // 	alert("hello");
+            // 	console.log('setTimeout')
+            // },2000)
+            // clearTimeout(timeOut1);
+            // setTimeout(fnCall, 5000);
+            // console.log('outside');
+            
+            // 间歇调用
+            // var interVal = setInterval(function(){
+            // 	console.log('间歇调用');
+            // },1000);
+            // setTimeout(function(){
+            // 	clearInterval(interVal);
+            // },10000);
+            // 每隔一秒 num递增一次，直到num的值等于max 清除
+            var num = 1,
+            	 max = 10,
+            	timeout = null;
+            // 间歇调用
+	            timeout = setInterval(function(){
+	            	console.log(num);
+	            	num ++;
+	            	if (num == 10) {
+		            	clearInterval(timeout);
+		            }
+	            },1000);
+	         // 超时调用
+	         function inCreamentNum(){
+	         	console.log(num);
+	         	num++;
+	         	if (num<=max) {
+	         		setTimeout(inCreamentNum,1000);
+	         	}else{
+	         		clearTimeout(timer);
+	         	}
+	         }
+	         timer=setTimeout(inCreamentNum,1000);
+        </script>
+    </div>
+</body>
+
+</html>

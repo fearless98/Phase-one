@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// var arr1 = [1,2,4];
+		// var arr2 = [12,3,5];
+		// var arr3 = arr1.concat(arr2,["middle","bottom","top"]);
+		// console.log(arr3);
+		
+		// var colors = ["red","green","blue","yellow","pink"] 
+		// console.log(colors.slice(-1,3));
+
+		//实现b数组对a数组的拷贝 方法越多越好
+		//方法一：笨笨的 不推荐
+		var a = [21,"zebra",true];
+		var b = [];//var b = new Array();
+		for (var i = 0; i < a.length; i++) {
+			b.push(a[i]);
+		}
+		console.log(b);
+		//方法二：反转再反转
+		var c = a.reverse().reverse();
+		console.log(c);
+		//方法三：连接一个空数组 这个最简便了
+		var d = [].concat(a);
+		console.log(d);
+		//方法四：slice()
+		var e = a.slice(0);
+		console.log(e);
+	</script>
+</body>
+</html>

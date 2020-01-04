@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			margin: 50px;
+		}
+		em{
+			font-style: normal;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<p class="text">您还可以输入<span><em id="count">30</em>/30</span></p>
+		<div class="input">
+			<textarea name="" id="text" cols="30" rows="10"></textarea>
+		</div>
+	</div>
+	<script>
+		//获取文本框
+		var text = document.getElementById("text");
+		var total = 30;
+		var count = document.getElementById("count");
+		document.onkeyup = function(){
+			//获取文本框值的长度
+			var len = text.value.length;
+			var allow = total - len;
+			if (allow == -1) {
+				console.log("住手");
+			}else{
+				count.innerHTML= allow;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>字体样式</title>
+	<style type="text/css">
+		/*.in{font-size: 0.5in;}
+		.cm{font-size: 0.5cm;}
+		.mm{font-size: 5mm;}
+		.pt{font-size: 15pt;}
+		.pc{font-size: 2px;}*/
+		p{
+			font-size: 20px;
+		}
+		.larger{
+			font-size: larger;
+		}
+		.smaller{
+			font-size: smaller;
+		}
+		.em{
+			font-size: 2em;
+		}
+		#fontSize{
+			font-size: 30px;
+		}
+		.percent{
+			font-size: 150%;
+		}
+	</style>
+</head>
+<body>
+	<!-- 绝对单位 -->
+	<!-- <p>默认字体大小</p>
+	<p class="in">文字大小是0.5in</p>
+	<p class="cm">文字大小是0.5cm</p>
+	<p class="mm">文字大小是5mm</p>
+	<p class="pt">文字大小是15pt</p>
+	<p class="pc">文字大小是2pc</p> -->
+
+	<!-- 相对单位 -->
+	<p>文字大小px，受显示器分辨率影响</p>
+	<p><span class="larger">相对父元素的文字大小变大</span></p>
+	<p><span class="smaller">相对父元素的文字大小变小</span></p>
+	<div id="fontSize">
+		<p>文字大小<span class="em">相对值em</span></p>
+		<p class="percent">文字大小<span>相对值%</span></p>
+	</div>
+</body>
+</html>

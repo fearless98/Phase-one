@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.on{
+			color: green; 
+		}
+		.current{
+			background-color: #ccc;
+			color: #f00;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<ul id="list">
+		<li><i>前端开发</i></li>
+		<li><b>服务器开发</b></li>
+		<li class="on">UI设计</li>
+		<li>写代码可真好玩儿</li>
+	</ul>
+	<script>
+		//innerHTML
+		// var lis = document.getElementById("list").getElementsByTagName("li");
+		// for (var i = 0; i < lis.length; i++) {
+		// 	console.log(lis[i].innerHTML);
+		// 	lis[i].innerHTML+="程序";
+		// }
+		
+		//className
+		 var lis = document.getElementById("list").getElementsByTagName("li");
+		 lis[2].className="current";
+
+	</script>
+</body>
+</html>

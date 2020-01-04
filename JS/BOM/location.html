@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box1{
+			height: 300px;
+			background: red;
+		}
+		.box2{
+			height: 800px;
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	 <!-- 锚链接时 寻找#后的id 即id为top的元素 -->
+	<!-- <div class="box1" id="top"></div>
+	<div class="box2"></div>
+	<button id="btn">返回顶部</button> -->
+	<script>
+		// console.log(location.href);
+		// console.log(location.hash);
+		// var getBtn = document.getElementById("btn");
+		// getBtn.onclick=function(){
+		// 	location.hash="#top";
+		// }
+		console.log(location.host);
+		console.log(location.hostname);
+		console.log(location.pathname);
+	</script>
+</body>
+</html>

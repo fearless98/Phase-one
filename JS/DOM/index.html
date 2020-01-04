@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="box" id="box">元素</div>
+	<ul id="list1">
+		<li>前端开发</li>
+		<li>服务器端开发</li>
+		<li>UI设计</li>
+	</ul>
+	<ol>
+		<li>javascript原生</li>
+		<li>javascript框架</li>
+	</ol>
+	<script>
+		var box = document.getElementById("box");
+		var lis1 = document.getElementsByTagName("li");
+		var lis2 = document.getElementById("list1").getElementsByTagName("li");
+		console.log(lis2.length);
+	</script>
+</body>
+</html>

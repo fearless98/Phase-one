@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	div,span{
+		background-color: #eee;
+		border: 1px solid #666;
+	}
+	/* .one{
+		font-size: 0px;
+	} */
+	div{
+		width: 100px;
+		height: 30px;
+		display: inline-block;
+		font-size: 14px;
+		padding: 5px;
+		margin: 10px;
+	}
+	/* span{
+		font-size: 10px;
+		width: 100px;
+		height: 30px;
+		padding: 5px;
+		margin: 10px;
+		display: block;
+	} */
+	span{
+		display: none;
+	}
+	a:hover span{
+		display: inline;
+	}
+</style>
+<body>
+	 <!--块级元素-->
+		 <div>display属性：div</div>
+		 <div>display属性：div</div>
+		 <div>display属性：div</div>
+		 <div>display属性：div</div>
+		 <div>display属性：div</div>
+		 <div>display属性：div</div>
+		 <div>display属性：div</div>
+		 <hr/>
+	 <!--内联元素-->
+	 	<span>display属性：span</span><span>display属性：span</span><span>display属性：span</span>
+	 	<hr/>
+	 	<a href="">指我...<span>和你捉迷藏</span></a>
+</body>
+</html>

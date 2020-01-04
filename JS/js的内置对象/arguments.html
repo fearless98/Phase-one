@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>function</title>
+</head>
+<body>
+	<script>
+		// function Add(num1,num2){
+		// 	var sum =num1+num2;
+		// 	return sum;
+		// }
+		// console.log(Add(5,6));
+		// alert(Add(99,2));
+		// var s = Add(8,1);
+		// document.write('8+1='+s);
+		// function myFunction(arg){
+		// 	//如果arg是非数字，不做任何操作，否则返回arg的两倍
+		// 	if (isNaN(arg)) return;
+		// 	else return arg*2;
+		// }
+		// console.log(myFunction(2));
+		// function inner(){
+		// 	console.log(arguments[0]);
+		// 	console.log(arguments.length);
+		// }
+		// inner(10,5);
+		// function add(num1,num2){
+		// 	arguments[0] = 99;
+		// 	console.log(num1);
+		// }
+		// add(55,66);
+		//求任意一组数字的平均值
+		function getAvg(){
+			var len = arguments.length;
+			var sum=0;
+			for (var i = 0; i < len; i++) {
+				sum += arguments[i];
+			}
+			return sum/len;
+		}
+		var avg = getAvg(2,2,2,2,2,2);
+		console.log(avg);
+	</script>
+</body>
+</html>

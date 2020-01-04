@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.lock{
+			width: 140px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			background-color: #666;
+			color: #fff;
+			border-radius: 10px;
+			margin-bottom: 20px;
+		}
+		.unlock{
+			width: 140px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			background-color: #0f0;
+			color: #fff;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="lock" id="btn">锁定</div>
+	<script>
+		var btn = document.getElementById("btn");
+		btn.onclick=function(){
+			if (btn.className == "lock") {
+				this.className = "unlock";
+				this.innerHTML="解锁";
+			}else{
+				this.className = "lock";
+				this.innerHTML="锁定";
+			}
+		}
+	</script>
+</body>
+</html>
